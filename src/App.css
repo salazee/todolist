@@ -1,0 +1,63 @@
+*,html{
+    background-color:rgb(148, 173, 248) ;
+    color:rgb(251, 249, 251);
+}
+.TodoWrapper{
+    max-width: 80%;
+    background-color: rgb(23, 5, 114);  
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom:40px;
+    justify-content:space-between;
+    align-items: center;
+    width: 40vh;
+    
+}
+
+
+.Todo{
+    display:flex;
+    align-items: center;
+   justify-content: space-between;
+    cursor: pointer;
+    min-width: 78%;
+    height: 15px;
+    padding: 5px;
+    border: none;
+    margin: 8px;
+}
+.TodoForm{
+    display: flex;
+    flex-direction: row;
+    border: none;
+    justify-content: space-evenly;
+   
+
+   
+}
+h1{
+    background-color: rgb(23, 5, 114);
+    font-size: 24px;
+    color: white;
+}
+.icon{
+    background-color: rgb(148, 173, 248)  ;
+    display: flex;
+    gap: 10px;
+    padding: 1 px;
+}
+.todo-btn{
+    background-color: rgb(148, 173, 248) ;
+    color: rgb(254, 252, 254);
+    width: 30%;
+    font-size: 13px;
+    padding: 0.55rem;
+    cursor: pointer;
+}
+.editTodo-btn{
+    background-color: rgb(148, 173, 248)  ;
+    color: rgb(251, 249, 251);
+    font-size: 13px;
+}
