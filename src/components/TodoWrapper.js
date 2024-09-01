@@ -7,9 +7,12 @@ uuidv4();
 
 export const TodoWrapper =() =>{
     const [todos ,setTodos]= useState(() =>{
+      if (typeof window !== "undefined") {
     const saveTodos =localStorage.getItem("todos");
     return saveTodos?JSON.parse(saveTodos) :[];
-  });
+ }
+  return[];
+ });
 
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
