@@ -1,4 +1,4 @@
-import React ,{useState}from "react";
+import React ,{useState,useEffect}from "react";
 import { TodoForm } from "./TodoForm";
 import {v4 as uuidv4} from 'uuid';
 import { Todo } from "./Todo";
@@ -6,7 +6,14 @@ import { EditTodoForm } from "./EditTodoForm";
 uuidv4();
 
 export const TodoWrapper =() =>{
-    const [todos ,setTodos]= useState([]);
+    const [todos ,setTodos]= useState(() =>{
+    const saveTodos =localStorage.getItem("todos");
+    return saveTodos?JSON.parse(saveTodos) :[];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
     const addTodo =(todo) =>{
         setTodos ([...todos , {id:uuidv4(),task:todo, completed:false, isEditing:false}])
@@ -24,6 +31,7 @@ const toggleComplete = (id) =>{
   
   const editTask =(task, id) =>
     setTodos (todos.map((todo )=> todo.id ===id ?{...todo,task,isEditing:!todo.isEditing}:todo));
+
   
   
     return(
@@ -38,7 +46,8 @@ const toggleComplete = (id) =>{
             key ={index} 
             toggleComplete ={toggleComplete}
             deleteTodo={deleteTodo}
-             editTodo={editTodo}/>
+             editTodo={editTodo} 
+            />
             )
           ))}
         </div> 
