@@ -1,4 +1,5 @@
 import './App.css';
+import './responsiveness.css';
 import { Todo } from './components/Todo';
 import { TodoForm } from './components/TodoForm';
 import { TodoWrapper } from './components/TodoWrapper';
