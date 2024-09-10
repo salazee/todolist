@@ -1,5 +1,5 @@
-@media screen and max-width:{
-  body{font-size:8px;}
+@media screen and (max-width:700px){
+  body{font-size:10px;}
 .TodoWrapper{
   width:80%;
 }
