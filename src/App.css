@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 *,html{
     background-color:rgb(148, 173, 248) ;
     color:rgb(6, 6, 6);
@@ -76,3 +77,9 @@ h1{
     
       
 }
+@media screen and (max-width:700px){
+    body{font-size:10px;}
+  .TodoWrapper{
+    width:80%;
+  }
+  }
